@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <!-- Chosen Palette: Calm Blue & Purple Gradient (Original) -->
-<!-- Application Structure Plan: The layout is now segmented into two distinct functional sections: "Student Services" and "Websites/Online Channels". This categorization helps users process information faster by grouping related tasks. The design is modernized by removing icons for a cleaner, text-focused look (Minimalist), relying on typography and spacing for hierarchy. The "hover-lift" interaction remains to provide tactile feedback. -->
-<!-- Visualization & Content Choices: 
-    - Header: Updated description to "บริการออนไลน์ ศูนย์ส่งเสริมและพัฒนานักศึกษา".
-    - Sections: Introduced subheaders to divide content logically.
-    - Buttons: Removed Unicode icons as requested. Kept the clean white pill/rounded-box shape for consistency and readability against the gradient background.
-    - Typography: Kanit font for a modern Thai aesthetic. 
+<!-- Application Structure Plan: 
+    - Layout: Segmented into "Student Services" and "Websites/Online Channels".
+    - Icons: Added specific brand icons (Facebook, LINE) and generic WWW icons using FontAwesome to improve visual scanning and meet user requirements.
+    - New Content: Added "Smile & Smart Center" appointment link.
 -->
-<!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. Icons removed as requested. -->
 <html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@cspd.wu - Links</title>
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Kanit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Brand Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         body {
             font-family: 'Kanit', sans-serif;
@@ -27,18 +32,29 @@
         .hover-lift:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-            background-color: #f8fafc; /* Slightly off-white on hover */
+            background-color: #f8fafc;
         }
         /* Glassmorphism effect for section headers */
         .glass-header {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.25);
             backdrop-filter: blur(5px);
             border-radius: 12px;
-            padding: 8px 16px;
+            padding: 8px 20px;
             display: inline-block;
             margin-bottom: 16px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border: 1px solid rgba(255,255,255,0.3);
         }
+        /* Icon styling to match font height */
+        .link-icon {
+            font-size: 1.1em; /* Adjusts icon size relative to text */
+            margin-right: 8px;
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .fa-facebook-square { color: #1877F2; } /* Facebook Blue */
+        .fa-line { color: #00C300; } /* LINE Green */
+        .fa-globe { color: #4B5563; } /* Neutral Gray for WWW */
     </style>
 </head>
 <body class="bg-gradient-to-br from-blue-200 via-purple-200 to-indigo-300 min-h-screen">
@@ -74,23 +90,29 @@
             </div>
 
             <div class="space-y-3">
-                <a href="https://cspdwu.github.io/lostandfound/" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-center shadow-sm hover-lift border border-white/50">
-                    ตรวจสอบของหายได้คืน
+                <a href="https://cspdwu.github.io/lostandfound/" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-left md:text-center shadow-sm hover-lift border border-white/50 flex items-center justify-center">
+                    <i class="fas fa-globe link-icon"></i> ตรวจสอบของหายได้คืน
                 </a>
                 
-                <a href="https://forms.gle/t7bKx6fHqwMeyGzC8" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-center shadow-sm hover-lift border border-white/50">
-                    แจ้งพบสิ่งของ-แจ้งตามหาสิ่งของ
+                <a href="https://forms.gle/t7bKx6fHqwMeyGzC8" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-left md:text-center shadow-sm hover-lift border border-white/50 flex items-center justify-center">
+                    <i class="fas fa-globe link-icon"></i> แจ้งพบสิ่งของ-แจ้งตามหาสิ่งของ
                 </a>
 
-                <a href="https://forms.gle/hhVp1gmkQPnuBYQx5" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-center shadow-sm hover-lift border border-white/50">
-                    จองห้องประชุมอาคารติวเตอร์
+                <a href="https://forms.gle/hhVp1gmkQPnuBYQx5" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-left md:text-center shadow-sm hover-lift border border-white/50 flex items-center justify-center">
+                    <i class="fas fa-globe link-icon"></i> จองห้องประชุมอาคารติวเตอร์
                 </a>
 
-                <a href="https://forms.gle/A6551a1cLMcz6u2u6" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-center shadow-sm hover-lift border border-white/50">
-                    ขอหนังสือรับรองความประพฤตินักศึกษา
+                <a href="https://forms.gle/A6551a1cLMcz6u2u6" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-left md:text-center shadow-sm hover-lift border border-white/50 flex items-center justify-center">
+                    <i class="fas fa-globe link-icon"></i> ขอหนังสือรับรองความประพฤติ
                 </a>
-                <a href="https://smilesmart.wu.ac.th/" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-center shadow-sm hover-lift border border-white/50">
-                    แบบประเมินสุขภาพจิต
+
+                <a href="https://smilesmart.wu.ac.th/" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-left md:text-center shadow-sm hover-lift border border-white/50 flex items-center justify-center">
+                    <i class="fas fa-globe link-icon"></i> แบบประเมินสุขภาพจิต
+                </a>
+
+                <!-- New LINE Link -->
+                <a href="https://lin.ee/TPMRMcM" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-left md:text-center shadow-sm hover-lift border border-white/50 flex items-center justify-center">
+                    <i class="fab fa-line link-icon"></i> นัดหมาย Smile & Smart Center
                 </a>
             </div>
         </div>
@@ -104,55 +126,53 @@
             </div>
 
             <div class="space-y-3">
-                <a href="https://cspd.wu.ac.th/" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-center shadow-sm hover-lift border border-white/50">
-                    เว็บไซต์ศูนย์ส่งเสริมและพัฒนานักศึกษา
+                <a href="https://cspd.wu.ac.th/" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-left md:text-center shadow-sm hover-lift border border-white/50 flex items-center justify-center">
+                    <i class="fas fa-globe link-icon"></i> เว็บไซต์ศูนย์ส่งเสริมและพัฒนานักศึกษา
                 </a>
 
-                <a href="https://alumni.wu.ac.th" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-center shadow-sm hover-lift border border-white/50">
-                    เว็บไซต์ศิษย์เก่าสัมพันธ์
+                <a href="https://alumni.wu.ac.th" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-left md:text-center shadow-sm hover-lift border border-white/50 flex items-center justify-center">
+                    <i class="fas fa-globe link-icon"></i> เว็บไซต์ศิษย์เก่าสัมพันธ์
                 </a>
 
-                <a href="https://www.facebook.com/walailakAlumni" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-center shadow-sm hover-lift border border-white/50">
-                    เพจศิษย์เก่าสัมพันธ์
+                <a href="https://www.facebook.com/walailakAlumni" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-left md:text-center shadow-sm hover-lift border border-white/50 flex items-center justify-center">
+                    <i class="fab fa-facebook-square link-icon"></i> เพจศิษย์เก่าสัมพันธ์
                 </a>
 
-                <a href="https://www.facebook.com/share/16VGFWtaTn/" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-center shadow-sm hover-lift border border-white/50">
-                    เพจงานวินัยนักศึกษา
+                <a href="https://www.facebook.com/share/16VGFWtaTn/" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-left md:text-center shadow-sm hover-lift border border-white/50 flex items-center justify-center">
+                    <i class="fab fa-facebook-square link-icon"></i> เพจงานวินัยนักศึกษา
                 </a>
 
-                <a href="https://www.facebook.com/wu.volunteer.center" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-center shadow-sm hover-lift border border-white/50">
-                    เพจจิตอาสา ม.วลัยลักษณ์
+                <a href="https://www.facebook.com/wu.volunteer.center" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-left md:text-center shadow-sm hover-lift border border-white/50 flex items-center justify-center">
+                    <i class="fab fa-facebook-square link-icon"></i> เพจจิตอาสา ม.วลัยลักษณ์
                 </a>
 
-                <a href="https://www.facebook.com/wu.scholarship" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-center shadow-sm hover-lift border border-white/50">
-                    เพจทุนการศึกษา มหาวิทยาลัยวลัยลักษณ์
+                <a href="https://www.facebook.com/wu.scholarship" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-left md:text-center shadow-sm hover-lift border border-white/50 flex items-center justify-center">
+                    <i class="fab fa-facebook-square link-icon"></i> เพจทุนการศึกษา มหาวิทยาลัยวลัยลักษณ์
                 </a>
 
-                <a href="https://www.facebook.com/LostandFound.cspd" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-center shadow-sm hover-lift border border-white/50">
-                    เพจของหายได้คืน
+                <a href="https://www.facebook.com/LostandFound.cspd" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-left md:text-center shadow-sm hover-lift border border-white/50 flex items-center justify-center">
+                    <i class="fab fa-facebook-square link-icon"></i> เพจของหายได้คืน
                 </a>
 
-                <a href="https://www.facebook.com/profile.php?id=61583499127824" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-center shadow-sm hover-lift border border-white/50">
-                    เพจนักศึกษาวิชาทหาร
+                <a href="https://www.facebook.com/profile.php?id=61583499127824" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-left md:text-center shadow-sm hover-lift border border-white/50 flex items-center justify-center">
+                    <i class="fab fa-facebook-square link-icon"></i> เพจนักศึกษาวิชาทหาร
                 </a>
 
-                <a href="https://www.facebook.com/SmileSmartCenter" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-center shadow-sm hover-lift border border-white/50">
-                    เพจWU Smile&Smart Center
+                <a href="https://www.facebook.com/SmileSmartCenter" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-left md:text-center shadow-sm hover-lift border border-white/50 flex items-center justify-center">
+                    <i class="fab fa-facebook-square link-icon"></i> เพจ WU Smile&Smart Center
                 </a>
 
-                <a href="https://www.facebook.com/groups/wu.volunteer.center" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-center shadow-sm hover-lift border border-white/50">
-                    กลุ่มWu volunteer center ศูนย์จิตอาสามวล.
+                <a href="https://www.facebook.com/groups/wu.volunteer.center" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-left md:text-center shadow-sm hover-lift border border-white/50 flex items-center justify-center">
+                    <i class="fab fa-facebook-square link-icon"></i> กลุ่ม Wu volunteer center
                 </a>
 
-                <a href="https://www.facebook.com/groups/442671105761880" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-center shadow-sm hover-lift border border-white/50">
-                    กลุ่มกยศ.วลัยลักษณ์
+                <a href="https://www.facebook.com/groups/442671105761880" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-left md:text-center shadow-sm hover-lift border border-white/50 flex items-center justify-center">
+                    <i class="fab fa-facebook-square link-icon"></i> กลุ่ม กยศ.วลัยลักษณ์
                 </a>
 
-                <a href="https://scholarship.wu.ac.th/" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-center shadow-sm hover-lift border border-white/50">
-                    ระบบทุนการศึกษามหาวิทยาลัยวลัยลักษณ์
+                <a href="https://scholarship.wu.ac.th/" target="_blank" class="block bg-white text-gray-700 font-medium w-full py-4 px-6 rounded-xl text-left md:text-center shadow-sm hover-lift border border-white/50 flex items-center justify-center">
+                    <i class="fas fa-globe link-icon"></i> ระบบทุนการศึกษามหาวิทยาลัยวลัยลักษณ์
                 </a>
-
-                
             </div>
         </div>
 
